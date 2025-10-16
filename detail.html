@@ -1,0 +1,212 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Détail Formation - WebAcademy</title>
+  
+    <!-- Open Graph pour Facebook -->
+    <meta property="og:title" content="Rejoins la formation WebAcademy" />
+    <meta property="og:description" content="Découvre les détails de notre formation complète en développement web." />
+    <meta property="og:image" content="https://formationweb-lus.github.io/formation/webacademy/images/imgc.jpg" />
+    <meta property="og:url" content="https://formationweb-lus.github.io/formation/webacademy/detail.html" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/course.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Arial&display=swap" rel="stylesheet">
+    <script type="module" src="scripts/main.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ17KCLW8N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-YJ17KCLW8N');
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const btnInscription = document.getElementById('btn-inscription');
+    if (btnInscription) {
+      btnInscription.addEventListener('click', function () {
+        gtag('event', 'click_inscription', {
+          'event_category': 'bouton',
+          'event_label': 'INSCRIVEZ-VOUS ICI',
+          'value': 1
+        });
+      });
+    }
+  });
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="WebAcademy Logo" style="max-height: 80px;">
+    </div>
+
+    <button id="menu-toggle" class="menu-button">☰</button>
+    <nav id="nav-menu" class="nav-hidden">
+        <ul class="nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="detail.html">Cours</a></li>
+            <li><a href="detail.html">Explorer</a></li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="history.html">Àpropos</a></li>
+            <li><a href="page_d'information.html" class="cta-signin">S'inscrir</a></li>
+        </ul>
+    </nav>
+
+    <div class="search-container">
+        <input type="text" placeholder="Rechercher...">
+        <button>Rechercher</button>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <img src="images/imgc.jpg" alt="Vue panoramique du parc national Rwenzori, Ouganda" class="hero-image">
+        <div class="hero-text">
+            <h1>Apprenez le développement web avec Webacademy</h1>
+            <p>Rejoignez-nous pour apprendre les technologies modernes et commencez votre parcours dans le développement web !</p>
+            <a href="page_d'information.html" id="btn-inscription" class="cta-button">INSCRIVEZ-VOUS ICI</a>
+
+        </div>
+    </section>
+
+    <section class="courses">
+        <h2>Voici les cours disponibles sur Webacademy, conçus pour vous aider à maîtriser le développement web et les technologies associées.</h2>
+        <div id="course-list"></div>
+        <button id="fetchDataBtn">Charger les cours</button>
+    </section>
+
+    <!-- Fenêtre modale pour afficher les détails du cours -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div id="modal-data"></div>
+            <button id="closeModal" class="modal-close-btn">Fermer</button>
+        </div>
+    </div>
+
+    
+    <section class="cta-promotion">
+        <img src="images/promotion.jpg" alt="Profitez de notre promotion" class="promo-image" loading="lazy">
+        <div class="promo-text">
+            <h3>Profitez de notre offre spéciale !</h3>
+            <p>Inscrivez-vous aujourd'hui et bénéficiez de 15% de réduction sur tous nos cours de développement web.</p>
+            <a href="page_d'information.html" class="cta-button">Je m'inscris</a>
+        </div>
+    </section>
+
+    <!-- Appel à l'action pour aller à la page À propos -->
+    <div class="cta-about">
+        <h3>En savoir plus sur Webacademy</h3>
+        <p>Découvrez notre histoire, notre mission, et comment nous aidons les étudiants à maîtriser le développement web.</p>
+        <a href="history.html" class="cta-button">À propos de Webacademy</a>
+    </div>
+
+    <!-- Première modale -->
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <div id="modal-data-1"></div>
+            <button id="closeModal-1" class="modal-close-btn">Fermer</button>
+        </div>
+    </div>
+
+    <!-- Deuxième modale -->
+    <div id="modal-2" class="modal">
+        <div class="modal-content">
+            <div id="modal-data-2"></div>
+            <button id="closeModal-2" class="modal-close-btn">Fermer</button>
+        </div>
+    </div>
+
+    <section class="caption-section">
+        <div class="caption">
+            <h1>Formation de qualité</h1>
+            <p>Accédez à une formation de haute qualité adaptée à tous les niveaux et maîtrisez les compétences essentielles du développement web.</p>
+        </div>
+        <div class="caption">
+            <h1>Savoir</h1>
+            <p>Développez vos connaissances en HTML, CSS, JavaScript et bien d'autres technologies modernes.</p>
+        </div>
+        <div class="caption">
+            <h1>Réussite</h1>
+            <p>Utilisez vos nouvelles compétences pour décrocher un emploi ou lancer vos propres projets en ligne.</p>
+        </div>
+    </section>
+
+    <section class="promotion-section">
+        <div class="cta-promotion">
+            <img src="images/emotio.jpg" alt="Profitez de notre promotion" class="promo-image" loading="lazy">
+            <div class="promo-text">
+                <h3>Profitez de notre offre spéciale !</h3>
+                <p>Inscrivez-vous aujourd'hui et bénéficiez de 30% de réduction sur tous nos cours de développement web.</p>
+                <a href="page_d'information.html" class="cta-button">Je m'inscris</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="caption-section">
+        <h2>Suivez le chemin de la réussite</h2>
+        <p>Découvrez nos offres spéciales sur les cours de développement web.</p>
+    </section>
+
+    <!-- Première série de légendes avec 5 images -->
+    <div class="caption-images">
+        <div class="image-box">
+            <img src="images/competence.jpg" alt="Améliorez vos compétences" loading="lazy">
+            <p>Améliorez vos compétences</p>
+        </div>
+        <div class="image-box">
+            <img src="images/travail.jpg" alt="Trouvez un meilleur emploi" loading="lazy">
+            <p>Trouvez un meilleur emploi</p>
+        </div>
+        <div class="image-box">
+            <img src="images/carriere.jpg" alt="Lancez votre propre carrière" loading="lazy">
+            <p>Lancez votre propre carrière</p>
+        </div>
+        <div class="image-box">
+            <img src="images/application-2699082_640.jpg" alt="Créez et développez un site web" loading="lazy">
+            <p>Créez et développez un site web</p>
+        </div>
+        <div class="image-box">
+            <img src="images/site.jpg" alt="Créez et développez des applications" loading="lazy">
+            <p>Créez et développez des applications</p>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-bottom">
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="Logo de Webacademy" loading="lazy">
+        </div>
+        <div class="footer-rules">
+            <div class="footer-rule">
+                <a href="privacy-policy.html" class="cta-button">Politique de confidentialité</a>
+            </div>
+            <div class="footer-rule">
+                <a href="terms-of-use.html" class="cta-button">Conditions d'utilisation</a>
+            </div>
+            <div class="footer-rule">
+                <a href="cookie-policy.html" class="cta-button">Politique relative aux cookies</a>
+            </div>
+            <div class="footer-rule">
+                <a href="about-us.html" class="cta-button">Utilité du site</a>
+                <p>&copy; 2025 Webacademy - Tous droits réservés</p>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+                <div class="footer-socials">
+                    <a href="#" class="social-icon"><i class="fab a-facebook-f"></i> Facebook</a>
+                    <a href="#" class="social-icon"><i class="fab a-instagram"></i> Instagram</a>
+                    <a href="#" class="social-icon"><i class="fab a-linkedin-in"></i> LinkedIn</a>
+                    <a href="#" class="social-icon"><i class="fab a-youtube"></i> YouTube</a>
+                    <a href="#" class="social-icon"><i class="fab a-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apprenez le développement web avec CréaWeb Academy. Inscrivez-vous à nos cours HTML, CSS, JavaScript, Python et bien plus.">
+    <meta name="keywords" content="Développement Web, HTML, CSS, JavaScript, Python, Formation, CréaWeb Academy">
+    <meta property="og:title" content="CréaWeb Academy - Apprenez le Développement Web">
+    <meta property="og:description" content="Découvrez et inscrivez-vous à notre formation en développement web chez CréaWeb Academy.">
+    <meta property="og:image" content="https://formationweb-lus.github.io/formation/webacademy/images/imgc.jpg" />
+    <meta property="og:url" content="https://jiresselusa127.systeme.io/school/course/">
+    <meta name="twitter:title" content="Apprenez le Développement Web">
+    <meta name="twitter:description" content="Inscrivez-vous maintenant et apprenez à créer des sites web professionnels.">
+    <meta name="twitter:image" content="images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>CréaWeb Academy | Formation Frontend en Développement Web</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/academy.css">
+    <script type="module" src="scripts/academy.js"></script>
+    <a href="${module.lien}" target="_blank" class="btn" title="Découvrir le module ${module.titre}">Découvrir</a>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ17KCLW8N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YJ17KCLW8N');
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const btnFormations = document.getElementById('btn-formations');
+    if (btnFormations) {
+      btnFormations.addEventListener('click', function () {
+        gtag('event', 'click_voir_formations', {
+          'event_category': 'bouton',
+          'event_label': 'Voir les Formations',
+          'value': 1
+        });
+      });
+    }
+  });
+</script>
+</head>
+<body>   
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="WebAcademy Logo" style="max-height: 80px;">
+
+        </div>
+        <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+        <nav id="navMenu">
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="detail.html">Formations</a>
+                    <ul class="submenu">
+                        <li><a href="Webacademy.html">Développement Web</a></li>
+                        <li><a href="detail.html">HTML & CSS</a></li>
+                        <li><a href="detail.html">JavaScript</a></li>
+                        <li><a href="detail.html">Python</a></li>
+                        <li><a href="detail.html">Marketing Digital</a></li>
+                    </ul>
+                </li>
+                <li><a href="history.html">Comparer les Formations</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Forum</a></li>
+                <li><a href="history.html">À propos</a></li>
+                <li><a href="page_d'information.html" class="cta-signin">S'inscrire</a></li>
+                <li class="search-container">
+                    <input type="text" placeholder="Rechercher...">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <video autoplay loop muted class="hero-video">
+                <source src="images/video.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la lecture vidéo.
+            </video>
+            <div class="hero-text">
+                <h1>Maîtrisez la Création de Sites Web</h1>
+                <p>Des cours adaptés à tous les niveaux pour maîtriser les technologies modernes.</p>
+                <a href="detail.html" id="btn-formations" class="cta-button">Voir les Formations</a>
+            </div>
+        </section>
+        <section class="advantages">
+            <h2>Pourquoi Choisir CréaWeb Academy ?</h2>
+            <div class="advantage-list">
+                <div class="advantage">
+                    <h3>Formateurs Experts</h3>
+                    <p>Apprenez auprès de professionnels du secteur avec des méthodes éprouvées.</p>
+                </div>
+                <div class="advantage">
+                    <h3>Formation 100% en ligne</h3>
+                    <p>Accédez aux cours de partout et progressez à votre rythme.</p>
+                </div>
+                <div class="advantage">
+                    <h3>Trouvez un Emploi Pendant la Formation</h3>
+                    <p>Acquérez des compétences recherchées et commencez votre carrière immédiatement.</p>
+                </div>
+            </div>
+            <section id="modules">
+                <h2>Nos Modules de Formation</h2>
+                <div id="modules-container">
+                    <!-- Les modules seront affichés dynamiquement ici -->
+                </div>
+            </section>
+        </section>
+        <section class="testimonials">
+            <h2>Ce Que Disent Nos Étudiants</h2>
+            <div class="testimonial-list">
+                <div class="testimonial">
+                    <img src="images/black.jpg" alt="Jean Dupont">
+                    <p>« Grâce à CréaWeb Academy, j'ai pu commencer ma carrière de développeur en quelques mois seulement ! »</p>
+                    <h4>Jean Dupont</h4>
+                </div>
+                <div class="testimonial">
+                    <img src="images/man.jpg" alt="Marie Leblanc">
+                    <p>« Les cours sont clairs et complets, parfaits pour un apprentissage efficace. »</p>
+                    <h4>Marie Leblanc</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- Section supplémentaire du pied de page avec logo et 4 règles -->
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Logo Webacademy">
+            </div>
+            <div class="footer-rules">
+                <div class="footer-rule">
+                    <a href="privacy-policy.html" class="cta-button">Politique de Confidentialité</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="terms-of-use.html" class="cta-button">Conditions d'Utilisation</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="cookie-policy.html" class="cta-button">Politique de Cookies</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="about-us.html" class="cta-button">Objectif du Site</a>
+                    <p>&copy; 2025 Webacademy - Tous droits réservés</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="jiresselusa127@gmail.com" class="social-icon"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Code injecté par Live-server -->
+    <script>
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Actualisation en direct activée.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Veuillez mettre à jour votre navigateur. Ce navigateur NE prend PAS en charge WebSocket pour le rechargement en direct.');
+        }
+    </script>
+</body>
+</html>

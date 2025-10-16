@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - CréaWeb Academy</title>
+    <link rel="stylesheet" href="styles/inscription.css">
+
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ17KCLW8N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YJ17KCLW8N');
+    </script>
+
+    <!-- Facebook Pixel -->
+    <script>
+      !function(f,b,e,v,n,t,s){
+        if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)
+      }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1033257251452638');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=1033257251452638&ev=PageView&noscript=1"/>
+    </noscript>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="WebAcademy Logo" style="max-height: 80px;">
+    </div>
+    <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="detail.html">Cours</a></li>
+            <li><a href="history.html">À propos</a></li>
+            <li><a href="infodecompte.html">Explorer</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Formulaire d'inscription</h1>
+    <p>Veuillez remplir correctement vos informations pour finaliser votre inscription.</p>
+
+    <form id="captureForm">
+            <div class="row">
+    <div class="field">
+        <label for="prenom">Prénom</label>
+        <input 
+            type="text" 
+            id="prenom" 
+            name="prenom" 
+            required 
+            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
+            title="Le prénom doit contenir uniquement des lettres."
+        >
+    </div>
+    <div class="field">
+        <label for="nom">Nom</label>
+        <input 
+            type="text" 
+            id="nom" 
+            name="nom" 
+            required 
+            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
+            title="Le nom doit contenir uniquement des lettres."
+        >
+    </div>
+</div>
+
+<div class="row">
+    <div class="field">
+        <label for="pays">Pays</label>
+        <input 
+            type="text" 
+            id="pays" 
+            name="pays" 
+            required 
+            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
+            title="Le pays doit contenir uniquement des lettres."
+        >
+    </div>
+    <div class="field">
+        <label for="ville">Ville</label>
+        <input 
+            type="text" 
+            id="ville" 
+            name="ville" 
+            required 
+            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
+            title="La ville doit contenir uniquement des lettres."
+        >
+    </div>
+</div>
+
+        <div class="row">
+            <div class="field">
+                <label for="code_postal">Code Postal</label>
+                <input type="text" id="code_postal" name="code_postal" required>
+            </div>
+            <div class="field">
+                <label for="telephone">Numéro de Téléphone</label>
+                <input 
+                    type="tel" 
+                    id="telephone" 
+                    name="telephone" 
+                    required 
+                    pattern="^\+243[0-9]{9}$" 
+                    title="Le numéro doit commencer par +243 et contenir exactement 9 chiffres après."
+                >
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="field">
+    <label for="email">Adresse Email</label>
+    <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required 
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$"
+        title="Veuillez entrer une adresse email valide (ex: exemple@gmail.com)."
+    >
+</div>
+
+        </div>
+
+        <button type="submit" class="submit-btn">S'inscrire</button>
+    </form>
+
+    <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyDzMpVFXdYEQ_4ch3GthMvF52hIRce9qD8",
+        authDomain: "inscriptionapp-ddb3e.firebaseapp.com",
+        projectId: "inscriptionapp-ddb3e",
+        storageBucket: "inscriptionapp-ddb3e.firebasestorage.app",
+        messagingSenderId: "213159898520",
+        appId: "1:213159898520:web:a986ee20ed1762b4e58fed"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("captureForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const formData = {};
+            ["nom", "prenom", "pays", "ville", "code_postal", "telephone", "email"].forEach(id => {
+                formData[id] = document.getElementById(id).value.trim();
+                if (!formData[id]) throw alert("Veuillez remplir tous les champs !");
+            });
+
+            // ✅ Vérification stricte du numéro de téléphone
+            const regexTel = /^\+243[0-9]{9}$/;
+            if (!regexTel.test(formData.telephone)) {
+                alert("Le numéro doit commencer par +243 et contenir exactement 9 chiffres après (ex: +243810000000).");
+                return;
+            }
+
+            formData.cours = [];
+            document.querySelectorAll('input[name="cours"]:checked').forEach(cb => formData.cours.push(cb.value));
+
+            try {
+                await addDoc(collection(db, "inscriptions"), { ...formData, timestamp: serverTimestamp() });
+
+                // Pixel Facebook
+                fbq('track', 'CompleteRegistration');
+
+                // GA4 event
+                gtag('event', 'complete_registration', {
+                    event_category: 'engagement',
+                    event_label: 'Inscription CréaWeb Academy'
+                });
+
+                // ✅ Redirection directe
+                window.location.href = "infodecompte.html";
+            } catch (error) {
+                console.error("Erreur d'enregistrement :", error);
+                alert("Une erreur est survenue. Veuillez réessayer plus tard.");
+            }
+        });
+    });
+
+    function toggleMenu() {
+        document.querySelector("nav ul").classList.toggle("active");
+    }
+    </script>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 CréaWeb Academy - Tous droits réservés</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Développement Web Moderne",
+    "description": "Apprenez HTML, CSS, JavaScript et plus encore.",
+    "figcaptionDescription": "Un guide complet pour débuter dans le développement web.",
+    "image": "images/imgc.jpg",
+    "link": "detail.html"
+  },
+  {
+    "id": 2,
+    "title": "JavaScript Avancé",
+    "description": "Maîtrisez les concepts avancés de JavaScript.",
+    "figcaptionDescription": "Approfondissez vos connaissances en JavaScript.",
+    "image": "images/java.png",
+    "link": "detail.html"
+  },
+  {
+    "id": 3,
+    "title": "Maîtriser le CSS",
+    "description": "Apprenez le design web avec CSS et les frameworks modernes.",
+    "figcaptionDescription": "Améliorez l’apparence de vos sites web avec CSS.",
+    "image": "images/css.png",
+    "link": "detail.html"
+  },
+  {
+    "id": 4,
+    "title": "JSON et APIs",
+    "description": "Comprenez comment structurer et manipuler les données JSON.",
+    "figcaptionDescription": "Gérez efficacement les données avec JSON et les APIs.",
+    "image": "images/imgc2.jpg",
+    "link": "detail.html"
+  },
+  {
+    "id": 5,
+    "title": "Les Fondamentaux du HTML",
+    "description": "Les bases du HTML pour créer des pages web structurées.",
+    "figcaptionDescription": "Apprenez à structurer vos pages web avec HTML.",
+    "image": "images/html.png",
+    "link": "detail.html"
+  },
+  {
+    "id": 6,
+    "title": "Python pour Débutants",
+    "description": "Découvrez la programmation avec Python, un langage polyvalent.",
+    "figcaptionDescription": "Apprenez Python, un langage puissant et facile à utiliser.",
+    "image": "images/python.png",
+    "link": "detail.html"
+  },
+  {
+    "id": 7,
+    "title": "MySQL et Bases de Données",
+    "description": "Apprenez à gérer et interroger des bases de données MySQL.",
+    "figcaptionDescription": "Maîtrisez MySQL pour manipuler les bases de données efficacement.",
+    "image": "images/sql.png",
+    "link": "detail.html"
+  },
+  {
+    "id": 8,
+    "title": "Marketing Digital",
+    "description": "Stratégies essentielles pour réussir dans le marketing en ligne.",
+    "figcaptionDescription": "Développez vos compétences en marketing digital.",
+    "image": "images/digital.png",
+    "link": "detail.html"
+  }
+]

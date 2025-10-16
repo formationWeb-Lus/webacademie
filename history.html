@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CréaWeb Academy - La formation qui façonne les experts du web de demain.">
+    <meta name="keywords" content="CréaWeb, Académie, Formation Web, Développement Web, Marketing Digital, UX/UI">
+    <title>CréaWeb Academy - La formation qui façonne les experts du web de demain</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ17KCLW8N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-YJ17KCLW8N');
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const btnInscription = document.getElementById('btn-inscription');
+    if (btnInscription) {
+      btnInscription.addEventListener('click', function () {
+        gtag('event', 'click_inscription', {
+          'event_category': 'bouton',
+          'event_label': 'INSCRIVEZ-VOUS ICI',
+          'value': 1
+        });
+      });
+    }
+  });
+</script>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="WebAcademy Logo" style="max-height: 80px;">
+        </div>
+        <nav>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="detail.html">Accueil</a></li>
+                <li><a href="detail.html">Nos Formations</a></li>
+                <li><a href="detail.html">Explorer</a></li>
+                <li><a href="#">Forum</a></li>
+                <li><a href="history.html">À Propos</a></li>
+                <li><a href="page_d'information.html" class="cta-signin">Connexion</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Rechercher...">
+            <button>Rechercher</button>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-list');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+    <main>
+        <section class="hero">
+            <img src="images/hiro.jpg" alt="Formation Web" class="hero-image">
+            <div class="hero-text">
+                <h1>Bienvenue à CréaWeb Academy</h1>
+                <p>La formation qui façonne les experts du web de demain.</p>
+                <a href="page_d'information.html" id="btn-inscription" class="cta-button">INSCRIVEZ-VOUS ICI</a>
+
+            </div>
+        </section>
+
+        <section class="history">
+            <div class="history-text">
+                <h2>Notre Histoire</h2>
+                <p>CréaWeb Academy est née de la passion d’experts du secteur déterminés à rendre les compétences numériques accessibles à tous. Fondée en <strong>2015</strong>, nous avons formé des milliers d’étudiants depuis.</p>
+                <p>Au fil des années, nous avons aidé nos apprenants à acquérir des compétences clés et à lancer de nouvelles carrières.</p>
+            </div>
+            <div class="history-icon">
+                <img src="images/history.jpg" alt="Notre Histoire">
+            </div>
+        </section>
+
+        <section class="mission">
+            <div class="mission-text">
+                <h2>Notre Mission</h2>
+                <p>Notre mission est de proposer des formations de qualité, accessibles et alignées sur les besoins du marché de l’emploi.</p>
+                <p>Nous privilégions l’apprentissage par la pratique pour garantir l’employabilité de nos étudiants.</p>
+            </div>
+        </section>
+
+        <section class="values">
+            <div class="values-text">
+                <h2>Nos Valeurs</h2>
+                <ul>
+                    <li><strong>Accessibilité :</strong> Une éducation ouverte à tous, sans barrières.</li>
+                    <li><strong>Apprentissage Pratique :</strong> Des formations axées sur des projets concrets.</li>
+                    <li><strong>Innovation :</strong> Une veille constante pour des formations à jour.</li>
+                    <li><strong>Communauté :</strong> Un réseau d’entraide et de partage.</li>
+                </ul>
+            </div>
+            <div class="values-icon">
+                <img src="images/imgc2.jpg" alt="Nos Valeurs">
+            </div>
+        </section>
+
+        <section class="distinction">
+            <div class="distinction-text">
+                <h2>Ce Qui Nous Rend Uniques</h2>
+                <ul>
+                    <li>Un accompagnement personnalisé vers l’emploi.</li>
+                    <li>Des cours conçus avec des experts du métier.</li>
+                    <li>Des projets concrets pour une vraie expérience pratique.</li>
+                </ul>
+            </div>
+            <div class="distinction-icon">
+                <img src="images/distang.jpg" alt="Ce Qui Nous Rend Uniques">
+            </div>
+        </section>
+
+        <section class="cta-before-footer">
+            <div class="cta-content">
+                <h2>Prêt à Commencer l’Aventure avec CréaWeb Academy ?</h2>
+                <p>Libérez votre potentiel avec des formations en développement web, design, marketing et bien plus.</p>
+                <a href="signin.html" class="cta-button">Commencer à apprendre</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Logo de CréaWeb Academy">
+            </div>
+            <div class="footer-rules">
+                <div class="footer-rule">
+                    <a href="privacy-policy.html" class="cta-button">Politique de confidentialité</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="terms-of-use.html" class="cta-button">Conditions d'utilisation</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="cookie-policy.html" class="cta-button">Politique des cookies</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="about-us.html" class="cta-button">Utilité du site</a>
+                    <p>&copy; 2025 CréaWeb Academy - Tous droits réservés</p>
+                </div>
+            </div>
+        </div>
+        <!-- Répétition de la section supprimée pour éviter les doublons inutiles -->
+    </footer>
+</body>
+</html>
