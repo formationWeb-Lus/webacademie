@@ -1,4 +1,3 @@
-<!DOCTYPE html> 
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -6,20 +5,21 @@
     <title>Inscription - CréaWeb Academy</title>
     <link rel="stylesheet" href="styles/inscription.css">
 
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WLRKCTMW');</script>
-<!-- End Google Tag Manager -->
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ17KCLW8N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YJ17KCLW8N');
+    </script>
 
     <!-- Facebook Pixel -->
     <script>
       !function(f,b,e,v,n,t,s){
         if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'];
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
         n.queue=[];t=b.createElement(e);t.async=!0;
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)
@@ -32,12 +32,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            src="https://www.facebook.com/tr?id=1033257251452638&ev=PageView&noscript=1"/>
     </noscript>
 </head>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLRKCTMW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
 <body>
 <header>
     <div class="logo">
@@ -57,62 +51,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main>
     <h1>Formulaire d'inscription</h1>
-
     <p>
         En remplissant ce formulaire d'inscription, j'accepte les frais d'inscription de 
         <strong>20$</strong> et je m'engage à payer le syllabus de chaque module suivi.
     </p>
 
     <form id="captureForm">
-        <div class="row">
-            <div class="field">
-                <label for="prenom">Prénom</label>
-                <input 
-                    type="text" 
-                    id="prenom" 
-                    name="prenom" 
-                    required 
-                    pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
-                    title="Le prénom doit contenir uniquement des lettres."
-                >
-            </div>
-            <div class="field">
-                <label for="nom">Nom</label>
-                <input 
-                    type="text" 
-                    id="nom" 
-                    name="nom" 
-                    required 
-                    pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
-                    title="Le nom doit contenir uniquement des lettres."
-                >
-            </div>
-        </div>
+            <div class="row">
+    <div class="field">
+        <label for="prenom">Prénom</label>
+        <input 
+            type="text" 
+            id="prenom" 
+            name="prenom" 
+            required 
+            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
+            title="Le prénom doit contenir uniquement des lettres."
+        >
+    </div>
+    <div class="field">
+        <label for="nom">Nom</label>
+        <input 
+            type="text" 
+            id="nom" 
+            name="nom" 
+            required 
+            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
+            title="Le nom doit contenir uniquement des lettres."
+        >
+    </div>
+</div>
 
-        <div class="row">
-            <div class="field">
-                <label for="pays">Pays</label>
-                <input 
-                    type="text" 
-                    id="pays" 
-                    name="pays" 
-                    required 
-                    pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
-                    title="Le pays doit contenir uniquement des lettres."
-                >
-            </div>
-            <div class="field">
-                <label for="ville">Ville</label>
-                <input 
-                    type="text" 
-                    id="ville" 
-                    name="ville" 
-                    required 
-                    pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
-                    title="La ville doit contenir uniquement des lettres."
-                >
-            </div>
-        </div>
+<div class="row">
+    <div class="field">
+        <label for="pays">Pays</label>
+        <input 
+            type="text" 
+            id="pays" 
+            name="pays" 
+            required 
+            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
+            title="Le pays doit contenir uniquement des lettres."
+        >
+    </div>
+    <div class="field">
+        <label for="ville">Ville</label>
+        <input 
+            type="text" 
+            id="ville" 
+            name="ville" 
+            required 
+            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
+            title="La ville doit contenir uniquement des lettres."
+        >
+    </div>
+</div>
 
         <div class="row">
             <div class="field">
@@ -134,16 +127,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="row">
             <div class="field">
-                <label for="email">Adresse Email</label>
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    required 
-                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$"
-                    title="Veuillez entrer une adresse email valide (ex: exemple@gmail.com)."
-                >
-            </div>
+    <label for="email">Adresse Email</label>
+    <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required 
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$"
+        title="Veuillez entrer une adresse email valide (ex: exemple@gmail.com)."
+    >
+</div>
+
         </div>
 
         <button type="submit" class="submit-btn">S'inscrire</button>
@@ -175,6 +169,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 if (!formData[id]) throw alert("Veuillez remplir tous les champs !");
             });
 
+            // ✅ Vérification stricte du numéro de téléphone
             const regexTel = /^\+243[0-9]{9}$/;
             if (!regexTel.test(formData.telephone)) {
                 alert("Le numéro doit commencer par +243 et contenir exactement 9 chiffres après (ex: +243810000000).");
@@ -187,12 +182,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             try {
                 await addDoc(collection(db, "inscriptions"), { ...formData, timestamp: serverTimestamp() });
 
-                // Facebook Pixel
+                // Pixel Facebook
                 fbq('track', 'CompleteRegistration');
 
-                // ❌ gtag() supprimé ici
+                // GA4 event
+                gtag('event', 'complete_registration', {
+                    event_category: 'engagement',
+                    event_label: 'Inscription CréaWeb Academy'
+                });
 
-                // Redirection
+                // ✅ Redirection directe
                 window.location.href = "infodecompte.html";
             } catch (error) {
                 console.error("Erreur d'enregistrement :", error);
