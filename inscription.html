@@ -19,7 +19,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       !function(f,b,e,v,n,t,s){
         if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'];
         n.queue=[];t=b.createElement(e);t.async=!0;
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)
@@ -58,7 +58,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
     <h1>Formulaire d'inscription</h1>
 
-    <!-- 🔥 TEXTE MODIFIÉ ICI -->
     <p>
         En remplissant ce formulaire d'inscription, j'accepte les frais d'inscription de 
         <strong>20$</strong> et je m'engage à payer le syllabus de chaque module suivi.
@@ -188,13 +187,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             try {
                 await addDoc(collection(db, "inscriptions"), { ...formData, timestamp: serverTimestamp() });
 
+                // Facebook Pixel
                 fbq('track', 'CompleteRegistration');
 
-                gtag('event', 'complete_registration', {
-                    event_category: 'engagement',
-                    event_label: 'Inscription CréaWeb Academy'
-                });
+                // ❌ gtag() supprimé ici
 
+                // Redirection
                 window.location.href = "infodecompte.html";
             } catch (error) {
                 console.error("Erreur d'enregistrement :", error);
